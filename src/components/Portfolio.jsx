@@ -9,6 +9,28 @@ import {Github, Linkedin, Mail, Globe, ExternalLink, ArrowRight, Code2, Rocket, 
 // 3) Add real projects/experience in the data arrays below
 // 4) Run `npm run dev` locally to preview, then deploy
 // =========================
+// Competitive programming profiles
+const COMPETITIVE = [
+  {
+    platform: 'Codeforces',
+    handle: 'devansh9725',
+    href: 'https://codeforces.com/profile/devansh9725',
+    blurb: 'Active in rated contests; improving speed & accuracy.',
+  },
+  {
+    platform: 'LeetCode',
+    handle: 'Devansh9725',
+    href: 'https://leetcode.com/u/Devansh9725/',
+    blurb: 'Daily practice across arrays, DP, and graphs.',
+  },
+  {
+    platform: 'CodeChef',
+    handle: 'devansh9725',
+    href: 'https://www.codechef.com/users/devansh9725',
+    blurb: 'Long & Lunchtime contests; strong problem solving.',
+  },
+];
+
 
 const SOCIALS = [
   { name: 'GitHub', href: 'https://github.com/devansh9725', Icon: Github }, // TODO: update if needed
