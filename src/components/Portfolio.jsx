@@ -311,7 +311,7 @@ export default function Portfolio() {
         </Section>
 
         {/* Competitive Programming */}
-<Section id="competitive" icon={Rocket} title="Competitive Programming">
+{/* <Section id="competitive" icon={Rocket} title="Competitive Programming">
   <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
     {COMPETITIVE.map((p) => (
       <div key={p.platform} className="rounded-2xl p-6 border border-white/10 bg-white/5">
@@ -326,7 +326,27 @@ export default function Portfolio() {
       </div>
     ))}
   </div>
+</Section> */}
+  <Section id="competitive" icon={Rocket} title="Competitive Programming">
+  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+    {Array.isArray(COMPETITIVE) && COMPETITIVE.map(p => (
+      <div key={p.platform} className="rounded-2xl p-6 border border-white/10 bg-white/5">
+        <div className="flex items-center justify-between">
+          <h3 className="text-white font-semibold">{p.platform}</h3>
+          <a href={p.href} target="_blank" rel="noreferrer noopener"
+             className="text-indigo-300 text-sm inline-flex items-center gap-1">
+            <ExternalLink className="w-4 h-4" /> Visit
+          </a>
+        </div>
+        <p className="text-gray-300 mt-2">{p.blurb}</p>
+        <div className="mt-3 text-xs text-gray-400">
+          Handle: <span className="text-gray-200">{p.handle}</span>
+        </div>
+      </div>
+    ))}
+  </div>
 </Section>
+
 
 {/* Projects */}
         <Section id="projects" icon={ExternalLink} title="Featured Projects">
